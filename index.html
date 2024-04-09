@@ -1,0 +1,81 @@
+<html>
+
+<head>
+  <title>Face Recognition Web App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="container">
+
+    <center>
+
+      <h1 id="header"> Face Recognition App</h1>
+
+      <br><br>
+
+      <p style="font-size: 22px;" id="p_tag">Model is trained to identify the following members of the family: </p>
+
+      <br>
+
+      <b id="bold">
+        Amma (Malini)
+        <hr>
+        Hari (Brother)
+        <hr>
+        Aditi (Sister)
+        <hr>
+      </b>
+
+      <br>
+
+      <label id="label1">Webcam View - </label>
+
+      <div id="webcam"></div>
+
+      <br><br>
+
+      <h3 id="resulth3">Result</h3>
+
+      <br>
+
+      <div id="result"></div>
+
+      <br><br>
+
+      <button id="button_snapshot" onclick="takeSnapshot()"> Take Snapshot!!! </button>
+
+      <br><br>
+
+      <button id="button_identify_image" onclick="identifyImage()" class="btn btn-warning"> Identify Image</button>
+
+      <br><br>
+
+      <p style="font-size: 30px;" id="object">Family Member Name: 
+      <span id="object_name">
+  
+      </span>
+      </p>
+
+      <p style="font-size: 30px;" id="accuracy">Accuracy :
+      <span id="accuracy_object">
+      </span>
+      </p>
+    </center>
+
+  </div>
+  <script src="main.js"></script>
+
+</body>
+
+</html>
